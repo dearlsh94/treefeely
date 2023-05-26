@@ -13,7 +13,7 @@ const Index: NextPage<IHome> = () => {
       </Head>
       <main className="home-container">
         <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
-        <div className="weezip-line">
+        <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank">
           <div className="text-box">
             <span>WEEZIP</span>
             <span>WEEZIP</span>
@@ -30,7 +30,7 @@ const Index: NextPage<IHome> = () => {
             <span>WEEZIP</span>
             <span>WEEZIP</span>
           </div>
-        </div>
+        </a>
       </main>
     </Fragment>
   )

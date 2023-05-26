@@ -36,28 +36,35 @@
   }
 
   .weezip-line {
-    display: none;
     position: absolute;
-    left: 20px;
-
+    top: 30px;
     width: 100vw;
+    padding: 6px;
     overflow: hidden;
-    transform: rotate(-37deg);
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #e5e5e5;
+    cursor: pointer;
+    &:hover {
+      color: #0f4c75;
+    }
     .text-box {
+      font-size: 15pt;
       white-space: nowrap;
-      // animation: marquee 10s linear infinite;
+      animation: marquee 20s linear infinite;
+      animation-fill-mode: both;
       span + span {
-        margin-left: 6px;
+        margin-left: 24px;
       }
     }
   }
 
   @keyframes marquee {
     0% {
-      transform: translateX(-100vw);
+      transform: translateX(-100%);
     }
     100% {
-      transform: translateX(100vw);
+      transform: translateX(100%);
     }
   }
 }
