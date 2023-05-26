@@ -1,0 +1,63 @@
+@import './globals.scss';
+
+@import './abstracts/minxins';
+@import './abstracts/variables';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/navigation';
+
+@import './components/index.scss';
+
+.home-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  svg {
+    transform: rotate(360deg);
+    cursor: grab;
+    animation: rotate 6s linear infinite;
+    text {
+      font-weight: 700;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .weezip-line {
+    display: none;
+    position: absolute;
+    left: 20px;
+
+    width: 100vw;
+    overflow: hidden;
+    transform: rotate(-37deg);
+    .text-box {
+      white-space: nowrap;
+      // animation: marquee 10s linear infinite;
+      span + span {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(100vw);
+    }
+  }
+}
