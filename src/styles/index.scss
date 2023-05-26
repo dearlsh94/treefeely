@@ -40,7 +40,6 @@
     top: 30px;
     width: 100vw;
     padding: 6px;
-    overflow: hidden;
     font-weight: 500;
     text-decoration: none;
     background-color: #e5e5e5;
@@ -49,10 +48,15 @@
       color: #0f4c75;
     }
     .text-box {
+      display: flex;
       font-size: 15pt;
-      white-space: nowrap;
-      animation: marquee 20s linear infinite;
-      animation-fill-mode: both;
+      transform: translateX(-10%);
+      span {
+        white-space: nowrap;
+        animation: marquee 3s linear infinite;
+        animation-fill-mode: both;
+        will-change: auto;
+      }
       span + span {
         margin-left: 24px;
       }
@@ -61,10 +65,10 @@
 
   @keyframes marquee {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(calc(100% + 24px));
     }
   }
 }
