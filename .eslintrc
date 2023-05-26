@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "legacyDecorators": true
+    },
+    "sourceType": "module",
+    "allowImportExportEverywhere": false
+  },
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-fallthrough": "off",
+    "no-useless-catch": "off",
+    "no-empty-function": "off",
+    "no-useless-escape": "off",
+    "ban-types": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks order
+    "react-hooks/exhaustive-deps": "off", // Checks effect dependencies
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@next/next/no-img-element": "off"
+  },
+  "globals": {
+    "React": "writable"
+  }
+}
