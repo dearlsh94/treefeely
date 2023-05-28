@@ -7,7 +7,6 @@ export interface IStar {
 }
 
 const Star = ({ positionTop, positionLeft, size, color, className }: IStar) => {
-  console.log({ color })
   return (
     <div
       className={`star ${className}`}
