@@ -1,0 +1,19 @@
+.star {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: twinkling 3s infinite;
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

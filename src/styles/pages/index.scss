@@ -1,13 +1,11 @@
 @import 'src/styles/abstracts/_variables.scss';
 
 .home-container {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-
   background-color: #000;
   svg {
     transform: rotate(360deg);
