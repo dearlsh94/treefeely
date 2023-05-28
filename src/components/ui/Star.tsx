@@ -4,9 +4,10 @@ export interface IStar {
   size: number
   color?: string
   className?: string
+  duration?: number
 }
 
-const Star = ({ positionTop, positionLeft, size, color, className }: IStar) => {
+const Star = ({ positionTop, positionLeft, size, color, className, duration }: IStar) => {
   return (
     <div
       className={`star ${className}`}
@@ -17,6 +18,7 @@ const Star = ({ positionTop, positionLeft, size, color, className }: IStar) => {
         height: `${size}px`,
         boxShadow: `0px 0px ${size * 1.5}px #fff`,
         backgroundColor: `${color || '#fff'}`,
+        animationDuration: `${duration > 0 ? duration : 1}s`,
       }}
     />
   )

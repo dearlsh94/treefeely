@@ -17,6 +17,7 @@ const Index: NextPage<IHome> = () => {
       positionLeft: `${getRandomInt(0, 100)}%`,
       size: getRandomInt(2, 12),
       color: isEvenNumber(getRandomInt(0, 10)) ? '#f7f3b4' : `#fff`,
+      duration: getRandomInt(3, 6),
     }
   }
 
@@ -46,6 +47,7 @@ const Index: NextPage<IHome> = () => {
             positionLeft={star.positionLeft}
             size={star.size}
             color={star.color}
+            duration={star.duration}
           />
         ))}
       </main>
