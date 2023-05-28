@@ -1,0 +1,76 @@
+@import 'src/styles/abstracts/_variables.scss';
+
+.home-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #000;
+  svg {
+    transform: rotate(360deg);
+    cursor: grab;
+    animation: rotate 6s linear infinite;
+    fill: $white-color-1;
+
+    text {
+      font-weight: 700;
+    }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .weezip-line {
+    position: absolute;
+    top: 30px;
+    width: 100vw;
+    padding: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #e5e5e5;
+    cursor: pointer;
+
+    .text-box {
+      display: flex;
+      font-size: 15pt;
+      transform: translateX(-10%);
+      span {
+        white-space: nowrap;
+        animation: marquee 3s linear infinite;
+        animation-fill-mode: both;
+        will-change: auto;
+      }
+      span + span {
+        margin-left: 24px;
+      }
+    }
+    &:hover {
+      color: #0f4c75;
+      .text-box span {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(100% + 24px));
+    }
+  }
+}

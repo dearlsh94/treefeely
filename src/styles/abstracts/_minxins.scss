@@ -1,11 +1,148 @@
-@mixin flex-center {
+@import './variables';
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin superDesktop {
+  @media (min-width: #{$breakpoint-super-desktop}) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-@mixin main-container($padding: 0px 20px) {
-  position: relative;
-  margin: 0 auto;
-  padding: $padding;
+@mixin animationFadeIn($duration) {
+  animation: fadein $duration;
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin animationFadeOut($duration) {
+  animation: fadeout $duration;
+  animation-fill-mode: forwards;
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin animationRotate($duration) {
+  animation: rotate $duration;
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin animationMotionLeft($distance) {
+  animation: motionLeft;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @keyframes motionLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX($distance);
+    }
+  }
+}
+@mixin animationMotionRight($distance) {
+  animation: motionRight;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @keyframes motionRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX($distance);
+    }
+  }
+}
+
+@mixin animationTada($diffScale: 0.1) {
+  animation: tada;
+  animation-duration: 1.2s;
+  @keyframes tada {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+      transform: scale3d(1 - $diffScale, 1 - $diffScale, 1 - $diffScale) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale3d(1 + $diffScale, 1 + $diffScale, 1 + $diffScale) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+      transform: scale3d(1 + $diffScale, 1 + $diffScale, 1 + $diffScale) rotate3d(0, 0, 1, -3deg);
+    }
+
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+  }
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
 }
