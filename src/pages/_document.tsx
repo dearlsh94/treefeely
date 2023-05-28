@@ -22,13 +22,31 @@ export default class AllstayDocument extends Document {
           <meta httpEquiv="Page-Exit" content="blendTrans(Duration=0.0)" />
 
           <meta name="robots" content="index,follow" />
-          <meta name="author" content="" />
-          <meta name="subject" content="" />
-          <meta name="writer" content="" />
-          <meta name="classification" content="" />
-          <meta property="keyword" content="" />
+          <meta name="author" content="Ethan.Lee" />
+          <meta name="writer" content="Ethan.Lee" />
+          <meta property="keyword" content="Treefeely, Weezip" />
 
           <link rel="icon" href="/static/favicon.png" />
+
+          <meta name="description" content={'Root of Treefeely'} />
+          <meta property="og:type" content={'website'} />
+          <meta property="og:title" content={'Treefeely'} />
+          <meta property="og:description" content={'Root of Treefeely'} />
+          <meta property="og:url" content={'https://treefeely.com'} />
+          <meta property="og:site_name" content={'Treefeely'} />
+          <meta property="og:locale" content={'ko_KR'} />
+          {/* <meta property="og:image" content={''} /> */}
+          {/* <meta property="og:image:width" content={''} /> */}
+          {/* <meta property="og:image:height" content={''} /> */}
+          <meta property="twitter:title" content={'Treefeely'} />
+          <meta property="twitter:description" content={'Root of Treefeely'} />
+          <meta property="twitter:url" content={'https://treefeely.com'} />
+
+          {/* <meta name="keywords" content={keywords} /> */}
+          {/* <meta name="image" content={seo.image} /> */}
+          {/* <meta name="twitter:card" content="summary_large_image" /> */}
+          {/* <meta name="twitter:image" content={seo.image} /> */}
+          {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
         </Head>
         <body>
           <Main />
