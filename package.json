@@ -10,7 +10,8 @@
     "lint": "next lint",
     "css-sort": "prettier --write src/**/*.scss",
     "test": "jest",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting",
+    "hosting": "yarn build:prod && yarn deploy"
   },
   "dependencies": {
     "@zeit/next-source-maps": "^0.0.3",
