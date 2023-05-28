@@ -23,7 +23,7 @@ const Index: NextPage<IHome> = () => {
 
   useEffect(() => {
     const s = []
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 50; i++) {
       s.push(createRandomStar())
     }
     setStars(s)
