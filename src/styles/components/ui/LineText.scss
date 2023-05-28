@@ -1,0 +1,30 @@
+.text-box {
+  display: flex;
+  padding: 6px 0px;
+  font-size: 15pt;
+  transform: translateX(-10%);
+  span {
+    white-space: nowrap;
+    animation: marquee 3s linear infinite;
+    animation-fill-mode: both;
+    will-change: auto;
+  }
+  span + span {
+    margin-left: 24px;
+  }
+
+  &:hover {
+    span {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(100% + 24px));
+  }
+}
