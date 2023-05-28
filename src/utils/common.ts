@@ -13,3 +13,22 @@ export const getTextColorByBackgroundColor = (hexColor: string) => {
   // 색상 선택
   return luma < 127.5 ? '#fff' : '#000'
 }
+
+/**
+ * min을 포함하되, max를 포함하지 않는 범위 내의 랜덤한 정수를 추출하는 함수
+ * @param min 최소 숫자 (포함)
+ * @param max 최대 숫자 (미포함)
+ * @returns
+ */
+export const getRandomInt = (min: number, max: number) => {
+  return Math.floor(Math.random() * (max - min) + min)
+}
+
+/**
+ * 짝수인지 판단하는 함수
+ * @param num 정수
+ * @returns
+ */
+export const isEvenNumber = (num: number) => {
+  return num % 2 === 0
+}
