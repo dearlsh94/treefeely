@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config')
 const path = require('path')
 
 const basePath = ''
@@ -25,14 +24,11 @@ const nextConfig = {
         'process.env.NEXT_IS_SERVER': JSON.stringify(isServer.toString()),
       })
     )
-
     config.resolve.modules.push(__dirname)
-
     return config
   },
   basePath,
   poweredByHeader: false,
-  i18n,
 }
 
 module.exports = nextConfig

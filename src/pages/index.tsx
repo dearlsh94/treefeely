@@ -13,7 +13,7 @@ const Index: NextPage<IHome> = () => {
       </Head>
       <main className="home-container">
         <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
-        <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank">
+        <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank" rel="noreferrer">
           <div className="text-box">
             <span>WEEZIP</span>
             <span>WEEZIP</span>
