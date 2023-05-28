@@ -1,4 +1,4 @@
-import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+import type { NextPage } from 'next'
 import { Fragment } from 'react'
 import Head from 'next/head'
 import CircleText from '@/components/ui/CircleText'
@@ -70,12 +70,6 @@ const Index: NextPage<IHome> = () => {
       </main>
     </Fragment>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  return {
-    props: {},
-  }
 }
 
 export default Index

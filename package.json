@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:prod": "env-cmd -f .env.production next build",
+    "build:prod": "env-cmd -f .env.production next build && next export",
     "dev": "env-cmd -f .env.local next dev -p 3000",
     "serve": "yarn build:prod && next start -p 3000",
     "lint": "next lint",
     "css-sort": "prettier --write src/**/*.scss",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@zeit/next-source-maps": "^0.0.3",
