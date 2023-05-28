@@ -27,6 +27,8 @@ export default class AllstayDocument extends Document {
           <meta name="writer" content="" />
           <meta name="classification" content="" />
           <meta property="keyword" content="" />
+
+          <link rel="icon" href="/static/favicon.png" />
         </Head>
         <body>
           <Main />
