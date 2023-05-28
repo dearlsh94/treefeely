@@ -1,4 +1,4 @@
-import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next'
+import type { NextPage } from 'next'
 import { Fragment } from 'react'
 import Head from 'next/head'
 import CircleText from '@/components/ui/CircleText'
@@ -13,7 +13,7 @@ const Index: NextPage<IHome> = () => {
       </Head>
       <main className="home-container">
         <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
-        <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank">
+        <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank" rel="noreferrer">
           <div className="text-box">
             <span>WEEZIP</span>
             <span>WEEZIP</span>
@@ -70,12 +70,6 @@ const Index: NextPage<IHome> = () => {
       </main>
     </Fragment>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  return {
-    props: {},
-  }
 }
 
 export default Index
