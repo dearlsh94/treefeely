@@ -11,7 +11,7 @@
     "css-sort": "prettier --write src/**/*.scss",
     "test": "jest",
     "deploy": "firebase deploy --only hosting",
-    "hosting": "yarn build:prod && yarn deploy"
+    "hosting": "npm install && npm run build:prod && npm run deploy"
   },
   "dependencies": {
     "@zeit/next-source-maps": "^0.0.3",
