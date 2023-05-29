@@ -47,6 +47,8 @@ export default class AllstayDocument extends Document {
           {/* <meta name="twitter:card" content="summary_large_image" /> */}
           {/* <meta name="twitter:image" content={seo.image} /> */}
           {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
+
+          <meta name="naver-site-verification" content="7eb2269b8e8e2da390026b7a185890cb98124e98" />
         </Head>
         <body>
           <Main />
