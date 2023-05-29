@@ -49,6 +49,18 @@ export default class AllstayDocument extends Document {
           {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
 
           <meta name="naver-site-verification" content="7eb2269b8e8e2da390026b7a185890cb98124e98" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          {process.env.NODE_ENV !== 'development' && (
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              `,
+              }}
+            />
+          )}
         </Head>
         <body>
           <Main />

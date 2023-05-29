@@ -5,8 +5,8 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 import { RecoilRoot } from 'recoil'
 import RecoilDebugObserver from '@/components/RecoilDebugObserver'
 import '@/styles/index.scss'
-import { initializeApp } from 'firebase/app'
-// import { getAnalytics } from 'firebase/analytics'
+import * as gtag from '../lib/gtag'
+import Script from 'next/script'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,23 +17,31 @@ const queryClient = new QueryClient({
 })
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const firebaseConfig = {
-    apiKey: process.env.FIREBASE_KEY,
-    authDomain: 'treefeely-e2aaf.firebaseapp.com',
-    databaseURL: 'https://treefeely-e2aaf-default-rtdb.asia-southeast1.firebasedatabase.app',
-    projectId: 'treefeely-e2aaf',
-    storageBucket: 'treefeely-e2aaf.appspot.com',
-    messagingSenderId: process.env.FIREBASE_SENDER_ID,
-    appId: '1:317346309374:web:f385cc225bf6636d47b1af',
-    measurementId: 'G-YK9YNZ05GD',
-  }
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig)
-  // const analytics = getAnalytics(app)
-
+  gtag.useGtag()
   return (
     <>
+      {process.env.NODE_ENV !== 'development' && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+          />
+          <Script
+            id="gtag-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gtag.GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+        </>
+      )}
       <RecoilRoot>
         <RecoilDebugObserver />
         <QueryClientProvider client={queryClient}>
