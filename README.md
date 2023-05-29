@@ -14,6 +14,7 @@ Come here, https://treefeely.com.
 - Next.js(v12.3.1)
 - Typescript
 - SCSS
+- Firebase Hosting
 - Google Analytics
 - Naver SearchAdviser
 <br/>
