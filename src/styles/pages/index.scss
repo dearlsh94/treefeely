@@ -7,9 +7,14 @@
   width: 100vw;
   height: 100vh;
   background-color: #000;
+
+  .circle-text-box {
+    display: contents;
+    cursor: pointer;
+  }
+
   svg {
     transform: rotate(360deg);
-    cursor: grab;
     animation: rotate 6s linear infinite;
     fill: $white-color-1;
 

@@ -22,20 +22,25 @@ const Index: NextPage<IHome> = () => {
   }
 
   useEffect(() => {
+    starRefresh()
+  }, [])
+
+  const starRefresh = () => {
     const s = []
     for (let i = 0; i < 50; i++) {
       s.push(createRandomStar())
     }
     setStars(s)
-  }, [])
-
+  }
   return (
     <Fragment>
       <Head>
         <title>Treefeely</title>
       </Head>
       <main className="home-container">
-        <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
+        <div className="circle-text-box" onClick={starRefresh}>
+          <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
+        </div>
         <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank" rel="noreferrer">
           <LineText text="WEEZIP" />
         </a>
