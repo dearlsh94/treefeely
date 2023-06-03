@@ -37,7 +37,7 @@ const Index: NextPage<IHome> = () => {
 
   const starRefresh = () => {
     const s = []
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 70; i++) {
       s.push(createRandomStar())
     }
     setStars(s)
