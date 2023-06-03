@@ -10,6 +10,7 @@ interface IHome {}
 
 const Index: NextPage<IHome> = () => {
   const [stars, setStars] = useState<IStar[]>([])
+  const [position, setPosition] = useState({ x: 0, y: 0 })
 
   const createRandomStar = (): IStar => {
     return {
@@ -17,12 +18,21 @@ const Index: NextPage<IHome> = () => {
       positionLeft: `${getRandomInt(0, 100)}%`,
       size: getRandomInt(2, 12),
       color: isEvenNumber(getRandomInt(0, 10)) ? '#f7f3b4' : `#fff`,
-      duration: getRandomInt(3, 6),
+      twinkleDuration: getRandomInt(3, 6),
     }
+  }
+
+  const handleMouseMove = e => {
+    setPosition({ x: e.clientX, y: e.clientY })
   }
 
   useEffect(() => {
     starRefresh()
+
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+    }
   }, [])
 
   const starRefresh = () => {
@@ -32,12 +42,13 @@ const Index: NextPage<IHome> = () => {
     }
     setStars(s)
   }
+
   return (
     <Fragment>
       <Head>
         <title>Treefeely</title>
       </Head>
-      <main className="home-container">
+      <main className="home-container" onMouseMove={handleMouseMove}>
         <div className="circle-text-box" onClick={starRefresh}>
           <CircleText text="TREEFEELY TREEFEELY TREEFEELY" size={'300px'} />
         </div>
@@ -52,7 +63,20 @@ const Index: NextPage<IHome> = () => {
             positionLeft={star.positionLeft}
             size={star.size}
             color={star.color}
-            duration={star.duration}
+            twinkleDuration={star.twinkleDuration}
+            moveX={position.x}
+            moveY={position.y}
+          />
+        ))}
+        {stars.map((star, i) => (
+          <Star
+            key={`star-${i}`}
+            className={`star-${i}`}
+            positionTop={star.positionTop}
+            positionLeft={star.positionLeft}
+            size={star.size}
+            color={star.color}
+            twinkleDuration={star.twinkleDuration}
           />
         ))}
       </main>

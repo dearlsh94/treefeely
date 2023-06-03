@@ -3,6 +3,7 @@
   background-color: #fff;
   border-radius: 50%;
   filter: blur(2px);
+  transition: top 3s ease-out, left 3s ease-out;
   animation: twinkling infinite;
 }
 

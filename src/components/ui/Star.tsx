@@ -4,21 +4,23 @@ export interface IStar {
   size: number
   color?: string
   className?: string
-  duration?: number
+  twinkleDuration?: number
+  moveX?: number
+  moveY?: number
 }
 
-const Star = ({ positionTop, positionLeft, size, color, className, duration }: IStar) => {
+const Star = ({ positionTop, positionLeft, size, color, className, twinkleDuration, moveX, moveY }: IStar) => {
   return (
     <div
       className={`star ${className}`}
       style={{
-        top: positionTop,
-        left: positionLeft,
+        top: moveY || positionTop,
+        left: moveX || positionLeft,
         width: `${size}px`,
         height: `${size}px`,
         boxShadow: `0px 0px ${size * 1.5}px #fff`,
         backgroundColor: `${color || '#fff'}`,
-        animationDuration: `${duration > 0 ? duration : 1}s`,
+        animationDuration: `${twinkleDuration > 0 ? twinkleDuration : 1}s`,
       }}
     />
   )
