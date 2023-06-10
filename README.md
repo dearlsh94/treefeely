@@ -20,7 +20,7 @@ Come here, https://treefeely.com.
 <br/>
 
 ## Set .env
-Add `.env.production` file in root directory
+Add `.env.production`, `.env.local` files in root directory
 And fill variables
 ```
 ENV = production
