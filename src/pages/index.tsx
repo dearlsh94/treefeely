@@ -55,7 +55,7 @@ const Index: NextPage<IHome> = () => {
         <a className="weezip-line" href="https://weezip.treefeely.com" target="_blank" rel="noreferrer">
           <LineText text="WEEZIP" />
         </a>
-        {stars.map((star, i) => (
+        {/* {stars.map((star, i) => (
           <Star
             key={`star-${i}`}
             className={`star-${i}`}
@@ -67,7 +67,7 @@ const Index: NextPage<IHome> = () => {
             moveX={position.x}
             moveY={position.y}
           />
-        ))}
+        ))} */}
         {stars.map((star, i) => (
           <Star
             key={`star-${i}`}
