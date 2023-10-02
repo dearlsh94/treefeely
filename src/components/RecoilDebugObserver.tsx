@@ -2,7 +2,7 @@ import { useRecoilSnapshot } from 'recoil'
 import { useEffect } from 'react'
 
 const RecoilDebugObserver = () => {
-  const isProduction = process.env.ENV === 'production'
+  const isProduction = process.env.NODE_ENV === 'production'
   const snapshot = useRecoilSnapshot()
   useEffect(() => {
     if (!isProduction) {

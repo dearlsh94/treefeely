@@ -6,10 +6,7 @@ const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   publicRuntimeConfig: {
-    ENV: process.env.ENV || 'development',
-  },
-  env: {
-    ENV: process.env.ENV || 'development',
+    NODE_ENV: process.env.NODE_ENV || 'development',
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
