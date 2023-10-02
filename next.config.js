@@ -7,13 +7,9 @@ const nextConfig = {
   swcMinify: true,
   publicRuntimeConfig: {
     ENV: process.env.ENV || 'development',
-    FIREBASE_KEY: process.env.FIREBASE_KEY || '',
-    FIREBASE_SENDER_ID: process.env.FIREBASE_SENDER_ID || '',
   },
   env: {
     ENV: process.env.ENV || 'development',
-    FIREBASE_KEY: process.env.FIREBASE_KEY || '',
-    FIREBASE_SENDER_ID: process.env.FIREBASE_SENDER_ID || '',
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
