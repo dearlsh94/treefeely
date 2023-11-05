@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { RecoilRoot } from 'recoil'
-import RecoilDebugObserver from '@/components/RecoilDebugObserver'
 import '@/styles/index.scss'
 import * as gtag from '../lib/gtag'
 import Script from 'next/script'
@@ -43,7 +42,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         </>
       )}
       <RecoilRoot>
-        <RecoilDebugObserver />
         <QueryClientProvider client={queryClient}>
           <ReactQueryDevtools initialIsOpen={false} />
           <Head>
