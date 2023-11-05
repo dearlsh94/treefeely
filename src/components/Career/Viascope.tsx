@@ -4,10 +4,10 @@ import Text from '@/components/common/Text'
 export default function Viascope() {
   return (
     <Fragment>
-      <Text>스콥정보통신</Text>
-      <Text>연구원</Text>
-      <Text>2018.10 ~ 2019.02</Text>
-      <Text>Spring boot, Classic ASP, php</Text>
+      <Text className="company__name">스콥정보통신</Text>
+      <Text className="company__role">연구원</Text>
+      <Text className="company__date">2018.10 ~ 2019.02</Text>
+      <Text className="company__language">Spring boot, Classic ASP, php</Text>
       <Text textAlign="left">자사 솔루션 라이센스 관리 사이트를 php에서 Spring boot로 마이그레이션했습니다.</Text>
       <Text textAlign="left">
         WAB(Web Authentication Browser) 서비스를 Classic ASP에서 Spring boot로 마이그레이션했습니다.

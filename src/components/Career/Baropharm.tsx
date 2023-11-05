@@ -4,10 +4,10 @@ import Text from '@/components/common/Text'
 export default function Baropharm() {
   return (
     <Fragment>
-      <Text>바로팜</Text>
-      <Text>Front-end Developer</Text>
-      <Text>2022.08 ~</Text>
-      <Text>Svelte, React, Typescript</Text>
+      <Text className="company__name">바로팜</Text>
+      <Text className="company__role">Front-end Developer</Text>
+      <Text className="company__date">2022.08 ~</Text>
+      <Text className="company__language">Svelte, React, Typescript</Text>
       <Text textAlign="left">약사님들을 위한 플랫폼 바로팜에서 주문, 반품 등을 고도화하고 UX를 개선하고 있습니다.</Text>
       <Text textAlign="left">커뮤니티 개발환경을 구성하고, 마케팅 프로모션 및 전시 영역 등을 고도화 했습니다.</Text>
       <Text textAlign="left">개발 환경을 개선하고, 모니터링 툴 및 버전 관리를 도입했습니다.</Text>
