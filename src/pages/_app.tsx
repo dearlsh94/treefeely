@@ -6,6 +6,9 @@ import { RecoilRoot } from 'recoil'
 import '@/styles/index.scss'
 import * as gtag from '../lib/gtag'
 import Script from 'next/script'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -16,6 +19,11 @@ const queryClient = new QueryClient({
 })
 
 const App = ({ Component, pageProps }: AppProps) => {
+  useEffect(() => {
+    AOS.init({
+      easing: 'ease-out',
+    })
+  }, [])
   gtag.useGtag()
   return (
     <>

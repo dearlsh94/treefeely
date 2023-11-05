@@ -1,70 +1,88 @@
-import type { NextPage } from 'next'
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import Head from 'next/head'
-import CircleText from '@/components/ui/CircleText'
-import LineText from '@/components/ui/LineText'
-import Star, { IStar } from '@/components/ui/Star'
-import { getRandomInt, isEvenNumber } from '@/utils/common'
+import AOSFullLayout from '@/components/layouts/AOSFullLayout'
+import BackgroundContainer from '@/components/layouts/BackgroundContainer'
+import FullLayout from '@/components/layouts/FullLayout'
+import MainTitle from '@/components/MainTitle'
+import Text from '@/components/common/Text'
+import AOSHalfLayout from '@/components/layouts/AOSHalfLayout'
+import Baropharm from '@/components/Career/Baropharm'
+import Allstay from '@/components/Career/Allstay'
+import Bizntech from '@/components/Career/Bizntech'
+import Viascope from '@/components/Career/Viascope'
 
-interface IHome {}
-
-const Index: NextPage<IHome> = () => {
-  const [stars, setStars] = useState<IStar[]>([])
-
-  const createRandomStar = (): IStar => {
-    return {
-      positionTop: `${getRandomInt(0, 100)}%`,
-      positionLeft: `${getRandomInt(0, 100)}%`,
-      size: getRandomInt(2, 12),
-      color: isEvenNumber(getRandomInt(0, 10)) ? '#f7f3b4' : `#fff`,
-      twinkleDuration: getRandomInt(3, 6),
-    }
-  }
-
-  useEffect(() => {
-    starRefresh()
-  }, [])
-
-  const starRefresh = () => {
-    const s = []
-    for (let i = 0; i < 9; i++) {
-      s.push(createRandomStar())
-    }
-    setStars(s)
-  }
-
+export default function IndexPage() {
   return (
     <Fragment>
       <Head>
         <title>Treefeely</title>
       </Head>
-      <main className="home-container">
-        <div className="circle-text-box" onClick={starRefresh}>
-          <CircleText text="TREEFEELY" size={'300px'} />
-        </div>
-        <a
-          className="weezip-line"
-          href="https://weezip.treefeely.com"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Weezip으로 이동"
-        >
-          <LineText text="WEEZIP" />
-        </a>
-        {stars.map((star, i) => (
-          <Star
-            key={`star-${i}`}
-            className={`star-${i}`}
-            positionTop={star.positionTop}
-            positionLeft={star.positionLeft}
-            size={star.size}
-            color={star.color}
-            twinkleDuration={star.twinkleDuration}
-          />
-        ))}
-      </main>
+      <BackgroundContainer>
+        <FullLayout>
+          <MainTitle />
+        </FullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>안녕하세요.</Text>
+          <Text>마음을 움직이는 기술을 통해 </Text>
+          <Text>더 편리하고 즐거운 세상이 되기를 소망하는, </Text>
+          <Text>웹 개발자 이승환(Ethan)입니다.</Text>
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>심리적 안전감을 바탕으로 한 소통을 좋아합니다.</Text>
+          <Text>개발자는 소통이 어렵다는 선입견을 오해로 바꾸고 싶습니다.</Text>
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>낙타와 사자, 아이의 모습으로 살아가기를 소망합니다.</Text>
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-right" align="flex-start">
+          <Baropharm />
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-right" align="flex-start">
+          <Allstay />
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-right" align="flex-start">
+          <Bizntech />
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-right" align="flex-start">
+          <Viascope />
+        </AOSFullLayout>
+        <AOSHalfLayout type="flip-left">
+          <Text>프론트엔드 다이빙 클럽 멤버</Text>
+          2023.11 ~
+        </AOSHalfLayout>
+        <AOSHalfLayout type="flip-right">
+          <Text>재고 관리 서비스 안녕재고 팀원</Text>
+          2023.10 ~
+        </AOSHalfLayout>
+        <AOSHalfLayout type="flip-left">
+          <Text>개인 블로그 Weezip 운영</Text>
+          2023.04 ~
+        </AOSHalfLayout>
+        <AOSHalfLayout type="flip-right">
+          <Text>영화 및 독서모임 북이영화 멤버</Text>
+          2021.06 ~
+        </AOSHalfLayout>
+        <AOSHalfLayout type="flip-left">
+          <Text>클럽하우스 음악 모임 검치단 단원</Text>
+          2021.03 ~
+        </AOSHalfLayout>
+        <AOSFullLayout type="flip-up">
+          <Text>gatsy-source-notion-feely 개발</Text>
+          2023.10
+        </AOSFullLayout>
+        <AOSFullLayout type="flip-up">
+          <Text>넥슨 게임 바람의 나라 커뮤니티 도톨 V1 구축</Text>
+          2020.07 ~ 2020.12
+        </AOSFullLayout>
+        <AOSFullLayout type="flip-up">
+          <Text>리그 오브 레전드 랜덤 챔피언 스펠 선택기 개발</Text>
+          2020.03
+        </AOSFullLayout>
+        <AOSFullLayout type="flip-up">
+          <Text>Android 푸시 메모 알람 매니저 Push Alarmy 출시</Text>
+          2017.04
+        </AOSFullLayout>
+      </BackgroundContainer>
     </Fragment>
   )
 }
-
-export default Index

@@ -1,11 +1,34 @@
-interface ICircleText {
-  size: string
+import { css, keyframes } from '@emotion/react'
+
+interface CircleTextProps {
+  size?: string
   text: string
 }
 
-const CircleText = ({ size, text }: ICircleText) => {
+const CircleText = ({ size, text }: CircleTextProps) => {
+  const rotate = keyframes`
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  `
   return (
-    <svg id="circle-text" viewBox="0 0 100 100" width={size} height={size}>
+    <svg
+      id="circle-text"
+      viewBox="0 0 100 100"
+      width={size}
+      height={size}
+      css={css`
+        width: 66%;
+        height: auto;
+        fill: currentColor;
+        transform: rotate(360deg);
+        transform-origin: center;
+        animation: ${rotate} 6s linear infinite;
+      `}
+    >
       <defs>
         <path
           id="circle"
