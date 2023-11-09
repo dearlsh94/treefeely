@@ -1,11 +1,10 @@
-const NotFound = (): JSX.Element => {
-  return (
-    <div>
-      <div>
-        <h1>404</h1>
-      </div>
-    </div>
-  )
-}
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
-export default NotFound
+export default function NotFound() {
+  const router = useRouter()
+  useEffect(() => {
+    router.replace('/')
+  }, [])
+  return <></>
+}
