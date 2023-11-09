@@ -22,7 +22,7 @@ export default ({
   spacing = 1,
   fontSize = fontSizes.normal,
   fontWeight = fontWeights.w400,
-  textAlign = 'center',
+  textAlign = 'left',
   fill,
   noDrag,
   underline = false,

@@ -1,13 +1,15 @@
-import { Fragment } from 'react'
 import Text from '@/components/common/Text'
+import CareerWrapper from './CareerWrapper'
 
 export default function Viascope() {
   return (
-    <Fragment>
-      <Text className="company__name">스콥정보통신</Text>
-      <Text className="company__role">연구원</Text>
-      <Text className="company__date">2018.10 ~ 2019.02</Text>
-      <Text className="company__language">Spring boot, Classic ASP, php</Text>
+    <CareerWrapper
+      name={'스콥정보통신'}
+      role={'연구원'}
+      from={'2018.01'}
+      to={'2019.08'}
+      languages={['SpringBoot', 'ClassicASP', 'PHP']}
+    >
       <Text textAlign="left">자사 솔루션 라이센스 관리 사이트를 php에서 Spring boot로 마이그레이션했습니다.</Text>
       <Text textAlign="left">
         WAB(Web Authentication Browser) 서비스를 Classic ASP에서 Spring boot로 마이그레이션했습니다.
@@ -16,6 +18,6 @@ export default function Viascope() {
         고객사에 설치되어있는 WAB을 유지보수하고, 신규 고객사의 요구사항에 맞춰 커스터마이징 후 도입하는 작업을
         진행했습니다.
       </Text>
-    </Fragment>
+    </CareerWrapper>
   )
 }
