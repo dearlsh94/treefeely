@@ -35,6 +35,7 @@ export default function CareerWrapper({ name, role, from, to, languages, childre
         >
           {languages.map(l => (
             <FlexView
+              key={l}
               center
               flex={0}
               css={css`

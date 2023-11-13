@@ -5,9 +5,7 @@ const basePath = ''
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  publicRuntimeConfig: {
-    NODE_ENV: process.env.NODE_ENV || 'development',
-  },
+  publicRuntimeConfig: {},
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
