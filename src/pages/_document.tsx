@@ -1,11 +1,7 @@
 import * as React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import getConfig from 'next/config'
-const { publicRuntimeConfig } = getConfig()
-const { ENV } = publicRuntimeConfig
-
-export default class AllstayDocument extends Document {
+export default class TreefeelyDocument extends Document {
   render() {
     return (
       <Html lang="ko">
@@ -71,7 +67,7 @@ export default class AllstayDocument extends Document {
   }
 }
 
-AllstayDocument.getInitialProps = async ctx => {
+TreefeelyDocument.getInitialProps = async ctx => {
   const originalRenderPage = ctx.renderPage
 
   ctx.renderPage = () => originalRenderPage()
