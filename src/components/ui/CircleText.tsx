@@ -1,7 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 
 interface CircleTextProps {
-  size?: string
+  size?: number
   text: string
 }
 
@@ -18,8 +18,8 @@ const CircleText = ({ size, text }: CircleTextProps) => {
     <svg
       id="circle-text"
       viewBox="0 0 100 100"
-      width={size}
-      height={size}
+      width={`${size}px`}
+      height={`${size}px`}
       css={css`
         width: 66%;
         height: auto;
