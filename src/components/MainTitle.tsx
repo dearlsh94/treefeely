@@ -9,7 +9,7 @@ export default function MainTitle() {
   `
   return (
     <div css={cssMainTitle}>
-      <CircleText text="TREEFEELY" />
+      <CircleText size={512} text="TREEFEELY" />
     </div>
   )
 }
