@@ -11,6 +11,8 @@ const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     AOS.init({
       easing: 'ease-out',
+      offset: 60,
+      mirror: true,
     })
   }, [])
 
