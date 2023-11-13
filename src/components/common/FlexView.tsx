@@ -28,7 +28,7 @@ export default forwardRef<HTMLDivElement, FlexViewProps>(
       nowrap,
       colGap = 0,
       rowGap = 0,
-      bgColor = '#fff',
+      bgColor = 'initial',
       ...props
     }: FlexViewProps,
     ref
@@ -41,8 +41,8 @@ export default forwardRef<HTMLDivElement, FlexViewProps>(
       width: width === 'fit' ? 'fit-content' : width === 'fill' ? '100%' : `${width}px`,
       flex: flex,
       ...(nowrap && { flexWrap: `nowrap` }),
-      columnGap: `${colGap}px`,
-      rowGap: `${rowGap}px`,
+      columnGap: `${colGap}rem`,
+      rowGap: `${rowGap}rem`,
       backgroundColor: bgColor,
     }
 

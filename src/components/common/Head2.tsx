@@ -1,8 +1,8 @@
 import { HTMLAttributes, LabelHTMLAttributes } from 'react'
-import { CSSObject, jsx, SerializedStyles } from '@emotion/react'
+import { CSSObject, jsx } from '@emotion/react'
 import { fontSizes, FontSizesValue, fontWeights, FontWeightValue, clamps, ClampsValue } from './constants'
 
-export type TextProps = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<HTMLLabelElement>) & {
+export type Head2Props = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<HTMLLabelElement>) & {
   color?: string
   lineHeight?: number
   spacing?: number
@@ -13,22 +13,21 @@ export type TextProps = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<H
   noDrag?: boolean
   underline?: boolean
   clamp?: ClampsValue
-  css?: SerializedStyles
 }
 
 export default ({
   color = 'black',
-  lineHeight = 1.2,
+  lineHeight = 1.3,
   spacing = 1,
-  fontSize = fontSizes.normal,
-  fontWeight = fontWeights.w400,
-  textAlign = 'left',
+  fontSize = fontSizes.xxLarge,
+  fontWeight = fontWeights.w700,
+  textAlign = 'center',
   fill,
   noDrag,
   underline = false,
   clamp = clamps.none,
   ...props
-}: TextProps) => {
+}: Head2Props) => {
   const css: CSSObject = {
     backgroundColor: `unset`,
     color: color,
@@ -46,5 +45,5 @@ export default ({
     ...clamp,
   }
 
-  return jsx(`span`, { css, ...props })
+  return jsx(`h2`, { css, ...props })
 }

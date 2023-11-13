@@ -1,21 +1,19 @@
 import { css } from '@emotion/react'
 
 interface AOSFullLayoutProps {
-  type?: 'fade-down' | 'fade-right' | 'flip-up'
   align?: 'flex-start' | 'center' | 'flex-end'
   children: React.ReactNode
 }
 
-export default function AOSFullLayout({ type = 'fade-down', align = 'center', children }: AOSFullLayoutProps) {
+export default function AOSFullLayout({ align = 'center', children }: AOSFullLayoutProps) {
   return (
     <div
-      data-aos={type}
+      data-aos={'fade-down'}
       css={css`
         width: 90vw;
         max-width: 1024px;
         clear: both;
         min-height: 120px;
-        background: #fff;
         border-radius: 8px;
         margin: 8vh 0;
         padding: 16px 12px;

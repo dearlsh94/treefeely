@@ -32,6 +32,9 @@ export default function AOSHalfLayout({ type = 'flip-left', align = 'center', ch
           flex-direction: column;
           row-gap: 8px;
           box-sizing: border-box;
+          box-shadow: ${`${type === 'flip-left' ? '-8px' : '8px'} 8px 12px 0px rgba(0, 0, 0, 0.65)`};
+          -webkit-box-shadow: ${`${type === 'flip-left' ? '-8px' : '8px'} 8px 12px 0px rgba(0, 0, 0, 0.65)`};
+          -moz-box-shadow: ${`${type === 'flip-left' ? '-8px' : '8px'} 8px 12px 0px rgba(0, 0, 0, 0.65)`};
         `}
       >
         {children}
