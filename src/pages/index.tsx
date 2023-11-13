@@ -23,16 +23,20 @@ export default function IndexPage() {
         </FullLayout>
         <AOSFullLayout type="fade-down">
           <Text>안녕하세요.</Text>
-          <Text>마음을 움직이는 기술을 통해 </Text>
-          <Text>더 편리하고 즐거운 세상이 되기를 소망하는, </Text>
-          <Text>웹 개발자 이승환(Ethan)입니다.</Text>
         </AOSFullLayout>
         <AOSFullLayout type="fade-down">
-          <Text>심리적 안전감을 바탕으로 한 소통을 좋아합니다.</Text>
-          <Text>개발자는 소통이 어렵다는 선입견을 오해로 바꾸고 싶습니다.</Text>
+          <Text>
+            마음을 움직이는 기술을 통해 더 편리하고 즐거운 세상이 되기를 소망하는 프론트엔드 개발자 이승환이라고 합니다.
+          </Text>
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>개발자는 소통이 어렵다는 선입견을 오해로 바꾸고 싶어요.</Text>
         </AOSFullLayout>
         <AOSFullLayout type="fade-down">
           <Text>낙타와 사자, 아이의 모습으로 살아가기를 소망합니다.</Text>
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>저는 회사에서 이런 일들을 했어요.</Text>
         </AOSFullLayout>
         <AOSFullLayout type="fade-right" align="flex-start">
           <Baropharm />
@@ -45,6 +49,9 @@ export default function IndexPage() {
         </AOSFullLayout>
         <AOSFullLayout type="fade-right" align="flex-start">
           <Viascope />
+        </AOSFullLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>저는 이런 활동들을 하고 있어요.</Text>
         </AOSFullLayout>
         <AOSHalfLayout type="flip-left">
           <Text>프론트엔드 다이빙 클럽 멤버</Text>
@@ -66,6 +73,9 @@ export default function IndexPage() {
           <Text>클럽하우스 음악 모임 검치단 단원</Text>
           2021.03 ~
         </AOSHalfLayout>
+        <AOSFullLayout type="fade-down">
+          <Text>제가 했던 일들이에요.</Text>
+        </AOSFullLayout>
         <AOSFullLayout type="flip-up">
           <Text>gatsy-source-notion-feely 개발</Text>
           2023.10
