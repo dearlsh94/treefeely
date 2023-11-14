@@ -4,6 +4,7 @@ import Text from '@/components/common/Text'
 import AOSFullCardLayout from '@/components/layouts/AOSFullCardLayout'
 import { fontSizes } from '@/components/common/constants'
 import { css } from '@emotion/react'
+import IconGithub from '@/components/icons/IconGithub'
 
 export default function DoingModule() {
   const titleText = (text: string) => (
@@ -22,16 +23,40 @@ export default function DoingModule() {
     <FlexView direction="column">
       <Head2Layout text={'이런 프로젝트를 했어요.'} />
       <AOSFullCardLayout type="flip-up">
+        <a
+          href={'https://github.com/dearlsh94/gatsby-source-notion-feely'}
+          target="_blank"
+          aria-label={`gatsby-source-notion-feely Github 이동`}
+          rel="noopener noreferrer"
+        >
+          <IconGithub />
+        </a>
         {titleText('gatsy-source-notion-feely')}
         <Text>Gatsby에서 Notion Database를 쉽게 연결할 수 있어요.</Text>
         <Text fontSize={fontSizes.small}>2023.10</Text>
       </AOSFullCardLayout>
       <AOSFullCardLayout type="flip-up">
+        <a
+          href={'https://github.com/dearlsh94/letter-me'}
+          target="_blank"
+          aria-label={`Letter Me Github 이동`}
+          rel="noopener noreferrer"
+        >
+          <IconGithub />
+        </a>
         {titleText('서로를 향한 편지 한 통, Letter Me')}
         <Text>개인 편지함을 만들고, 다른 편지함에 편지를 보낼 수 있어요.</Text>
         <Text fontSize={fontSizes.small}>2023.09</Text>
       </AOSFullCardLayout>
       <AOSFullCardLayout type="flip-up">
+        <a
+          href={'https://github.com/dearlsh94/WeeZip'}
+          target="_blank"
+          aria-label={`Weezip Github 이동`}
+          rel="noopener noreferrer"
+        >
+          <IconGithub />
+        </a>
         {titleText('Gatsby + Notion 블로그 Weezip')}
         <Text>Gatsby와 Notion을 사용해 만든 개인 블로그예요.</Text>
         <Text fontSize={fontSizes.small}>2023.04</Text>
