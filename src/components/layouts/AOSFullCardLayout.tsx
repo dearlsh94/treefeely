@@ -3,10 +3,16 @@ import { css } from '@emotion/react'
 interface AOSFullCardLayoutProps {
   type?: 'fade-down' | 'fade-right' | 'flip-up'
   align?: 'flex-start' | 'center' | 'flex-end'
+  mt?: number
   children: React.ReactNode
 }
 
-export default function AOSFullCardLayout({ type = 'fade-down', align = 'center', children }: AOSFullCardLayoutProps) {
+export default function AOSFullCardLayout({
+  type = 'fade-down',
+  align = 'center',
+  mt = 6,
+  children,
+}: AOSFullCardLayoutProps) {
   return (
     <div
       data-aos={type}
@@ -17,7 +23,7 @@ export default function AOSFullCardLayout({ type = 'fade-down', align = 'center'
         min-height: 120px;
         background: #fff;
         border-radius: 8px;
-        margin: 8vh 0;
+        margin: ${`${mt}vh 0`};
         padding: 16px 12px;
         display: flex;
         justify-content: center;
