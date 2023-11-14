@@ -6,10 +6,18 @@ import AOSFullCardLayout from '@/components/layouts/AOSFullCardLayout'
 export default function DoingModule() {
   return (
     <FlexView direction="column">
-      <Head2Layout text={'제가 했던 일들이에요.'} />
+      <Head2Layout text={'이런 프로젝트를 했어요.'} />
       <AOSFullCardLayout type="flip-up">
         <Text>gatsy-source-notion-feely</Text>
         2023.10
+      </AOSFullCardLayout>
+      <AOSFullCardLayout type="flip-up">
+        <Text>서로를 향한 편지 한 통, Letter Me</Text>
+        2023.09
+      </AOSFullCardLayout>
+      <AOSFullCardLayout type="flip-up">
+        <Text>Gatsby + Notion 블로그 Weezip</Text>
+        2023.04
       </AOSFullCardLayout>
       <AOSFullCardLayout type="flip-up">
         <Text>넥슨 게임 바람의 나라 커뮤니티 도톨 V1</Text>
@@ -20,7 +28,7 @@ export default function DoingModule() {
         2020.03
       </AOSFullCardLayout>
       <AOSFullCardLayout type="flip-up">
-        <Text>Android 푸시 메모 알람 매니저 Push Alarmy</Text>
+        <Text textAlign="center">Android 푸시 메모 알람 매니저 Push Alarmy</Text>
         2017.04
       </AOSFullCardLayout>
     </FlexView>

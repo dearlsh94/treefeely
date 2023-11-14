@@ -25,7 +25,7 @@ export default function AOSHalfLayout({ type = 'flip-left', align = 'center', ch
           background: #fff;
           border-radius: 8px;
           margin: 4vh 0;
-          padding: 16px 12px;
+          padding: 12px 8px;
           display: flex;
           justify-content: center;
           align-items: ${align};
