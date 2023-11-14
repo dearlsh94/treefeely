@@ -10,16 +10,16 @@ export default function CareerModule() {
   return (
     <FlexView direction="column">
       <Head2Layout text={'회사에서 이런 일들을 했어요.'} />
-      <AOSFullCardLayout type="fade-right" align="flex-start" mt={8}>
+      <AOSFullCardLayout type="fade-right" mt={8}>
         <Baropharm />
       </AOSFullCardLayout>
-      <AOSFullCardLayout type="fade-right" align="flex-start" mt={8}>
+      <AOSFullCardLayout type="fade-right" mt={8}>
         <Allstay />
       </AOSFullCardLayout>
-      <AOSFullCardLayout type="fade-right" align="flex-start" mt={8}>
+      <AOSFullCardLayout type="fade-right" mt={8}>
         <Bizntech />
       </AOSFullCardLayout>
-      <AOSFullCardLayout type="fade-right" align="flex-start" mt={8}>
+      <AOSFullCardLayout type="fade-right" mt={8}>
         <Viascope />
       </AOSFullCardLayout>
     </FlexView>
