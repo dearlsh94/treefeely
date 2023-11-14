@@ -37,7 +37,7 @@ export default forwardRef<HTMLDivElement, FlexViewProps>(
       display: `flex`,
       flexDirection: direction === 'row' ? 'row' : 'column',
       justifyContent: center ? 'center' : justifyContent,
-      alignItem: center ? 'center' : alignItem,
+      alignItems: center ? 'center' : alignItem,
       width: width === 'fit' ? 'fit-content' : width === 'fill' ? '100%' : `${width}px`,
       flex: flex,
       ...(nowrap && { flexWrap: `nowrap` }),
