@@ -8,6 +8,7 @@ import DoingModule from '@/modules/DoingModule'
 import DoneModule from '@/modules/DoneModule'
 import IntroduceModule from '@/modules/IntroduceModule'
 import FlexView from '@/components/common/FlexView'
+import CallModule from '@/modules/CallModule'
 
 export default function IndexPage() {
   return (
@@ -24,6 +25,7 @@ export default function IndexPage() {
           <CareerModule />
           <DoingModule />
           <DoneModule />
+          <CallModule />
         </FlexView>
       </BackgroundContainer>
     </Fragment>
