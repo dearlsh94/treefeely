@@ -32,7 +32,7 @@ const ErrorPage = (props: ErrorPageProps): JSX.Element => {
 }
 
 export async function getServerSideProps(props: NextPageContext) {
-  const { res, err, asPath } = props
+  const { res, err } = props
 
   const errorInitialProps: ErrorProps = (await NextErrorComponent.getInitialProps({
     res,

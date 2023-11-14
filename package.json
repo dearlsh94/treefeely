@@ -15,11 +15,9 @@
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/react": "^11.11.1",
-    "@zeit/next-source-maps": "^0.0.3",
     "aos": "^3.0.0-beta.6",
     "browser-image-compression": "^2.0.0",
     "env-cmd": "^10.1.0",
-    "firebase": "^9.22.1",
     "next": "12.3.1",
     "next-compose-plugins": "^2.2.1",
     "react": "18.2.0",
@@ -36,8 +34,6 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.5",
     "prettier-plugin-style-order": "^0.2.2",
-    "stylelint": "^14.12.1",
-    "stylelint-prettier": "^2.0.0",
     "typescript": "4.8.3"
   }
 }
