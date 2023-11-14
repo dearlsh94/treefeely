@@ -16,7 +16,7 @@ export type TextProps = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<H
   css?: SerializedStyles
 }
 
-export default ({
+export default function Text({
   color = 'black',
   lineHeight = 1.2,
   spacing = 1,
@@ -28,7 +28,7 @@ export default ({
   underline = false,
   clamp = clamps.none,
   ...props
-}: TextProps) => {
+}: TextProps) {
   const css: CSSObject = {
     backgroundColor: `unset`,
     color: color,

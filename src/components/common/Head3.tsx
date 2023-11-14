@@ -15,7 +15,7 @@ export type Head3Props = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<
   clamp?: ClampsValue
 }
 
-export default ({
+export default function Head3({
   color = 'black',
   lineHeight = 1.2,
   spacing = 1,
@@ -27,7 +27,7 @@ export default ({
   underline = false,
   clamp = clamps.none,
   ...props
-}: Head3Props) => {
+}: Head3Props) {
   const css: CSSObject = {
     backgroundColor: `unset`,
     color: color,

@@ -27,6 +27,7 @@ export default function TreefeelyModule() {
       {services().map((s, i) => (
         <AOSHalfLayout type={(i + 1) % 2 === 1 ? 'flip-left' : 'flip-right'}>
           <a
+            key={s.name}
             href={s.link}
             target="_blank"
             aria-label={`${s.name} 이동`}

@@ -87,6 +87,7 @@ export default function CallModule() {
       >
         {socials().map(s => (
           <a
+            key={s.name}
             href={s.link}
             target="_blank"
             aria-label={`${s.name} 이동`}
