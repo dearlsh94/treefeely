@@ -25,9 +25,8 @@ export default function TreefeelyModule() {
     <FlexView direction="column">
       <Head2Layout text={'Treefeely 서비스들이예요.'} />
       {services().map((s, i) => (
-        <AOSHalfLayout type={(i + 1) % 2 === 1 ? 'flip-left' : 'flip-right'}>
+        <AOSHalfLayout key={s.name} type={(i + 1) % 2 === 1 ? 'flip-left' : 'flip-right'}>
           <a
-            key={s.name}
             href={s.link}
             target="_blank"
             aria-label={`${s.name} 이동`}
