@@ -14,17 +14,14 @@ export default function CareerWrapper({ name, role, from, to, languages, sentenc
   return (
     <FlexView direction="column" rowGap={1}>
       <FlexView direction="column" rowGap={0.25}>
-        <Text className="company__name" fontSize={fontSizes.large} fontWeight={fontWeights.w700}>
+        <Text fontSize={fontSizes.large} fontWeight={fontWeights.w700}>
           {name}
         </Text>
-        <Text className="company__role" fontSize={fontSizes.small}>
-          {role}
-        </Text>
-        <Text className="company__date" fontSize={fontSizes.small}>
+        <Text fontSize={fontSizes.small}>{role}</Text>
+        <Text fontSize={fontSizes.small}>
           {from} ~ {to}
         </Text>
         <FlexView
-          className="company__languages"
           justifyContent={justifyContents.start}
           colGap={0.75}
           css={css`
