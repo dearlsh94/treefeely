@@ -98,6 +98,7 @@ export default function CallModule() {
             href={s.link}
             target="_blank"
             aria-label={`${s.name} 이동`}
+            rel="noopener noreferrer"
             css={css`
               display: flex;
               flex-direction: column;

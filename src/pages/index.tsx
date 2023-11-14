@@ -6,6 +6,7 @@ import MainTitle from '@/components/MainTitle'
 import CareerModule from '@/modules/CareerModule'
 import DoingModule from '@/modules/DoingModule'
 import DoneModule from '@/modules/DoneModule'
+import TreefeelyModule from '@/modules/TreefeelyModule'
 import IntroduceModule from '@/modules/IntroduceModule'
 import FlexView from '@/components/common/FlexView'
 import CallModule from '@/modules/CallModule'
@@ -22,6 +23,7 @@ export default function IndexPage() {
         </FullLayout>
         <FlexView direction="column" rowGap={10}>
           <IntroduceModule />
+          <TreefeelyModule />
           <CareerModule />
           <DoingModule />
           <DoneModule />
