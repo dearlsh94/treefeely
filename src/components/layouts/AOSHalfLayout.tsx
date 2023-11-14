@@ -15,8 +15,8 @@ export default function AOSHalfLayout({ type = 'flip-left', align = 'center', ch
     <div
       data-aos={type}
       css={css`
-        width: 45vw;
-        max-width: 512;
+        width: ${link ? '100%' : '50%'};
+        max-width: 512px;
         clear: both;
         height: 120px;
         background: #fff;
@@ -47,7 +47,16 @@ export default function AOSHalfLayout({ type = 'flip-left', align = 'center', ch
       `}
     >
       {link ? (
-        <a href={link.url} target="_blank" aria-label={link.ariaLabel}>
+        <a
+          href={link.url}
+          target="_blank"
+          aria-label={link.ariaLabel}
+          css={css`
+            width: 50%;
+            display: flex;
+            justify-content: center;
+          `}
+        >
           {render}
         </a>
       ) : (
