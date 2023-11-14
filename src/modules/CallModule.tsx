@@ -1,7 +1,6 @@
 import FlexView from '@/components/common/FlexView'
 import Head2Layout from '@/components/layouts/Head2Layout'
 import Text from '@/components/common/Text'
-import AOSFullCardLayout from '@/components/layouts/AOSFullCardLayout'
 import { css } from '@emotion/react'
 import { fontSizes } from '@/components/common/constants'
 
@@ -68,7 +67,7 @@ export default function CallModule() {
   }
 
   return (
-    <FlexView direction="column">
+    <FlexView direction="column" center>
       <Head2Layout text={'대화를 좋아해요.'} />
       <div
         data-aos={'fade-down'}

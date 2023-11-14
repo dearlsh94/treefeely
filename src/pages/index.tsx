@@ -25,8 +25,10 @@ export default function IndexPage() {
           <CareerModule />
           <DoingModule />
           <DoneModule />
-          <CallModule />
         </FlexView>
+        <FullLayout>
+          <CallModule />
+        </FullLayout>
       </BackgroundContainer>
     </Fragment>
   )
