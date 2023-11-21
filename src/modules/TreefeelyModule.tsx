@@ -5,17 +5,18 @@ import Text from '@/components/common/Text'
 import { css } from '@emotion/react'
 import { fontSizes, fontWeights } from '@/components/common/constants'
 import IconLinkOut from '@/components/icons/IconLinkOut'
+import Linker from '@/components/common/Linker'
 
 export default function TreefeelyModule() {
   const services = () => {
     return [
       {
-        name: '개인 블로그 Weezip',
+        name: 'Weezip',
         link: 'https://weezip.treefeely.com',
         date: '2023.03',
       },
       {
-        name: '서로를 향한 편 지 한 통, Letter Me',
+        name: 'Letter Me',
         link: 'https://letter-me.treefeely.com',
         date: '2023.09',
       },
@@ -26,11 +27,10 @@ export default function TreefeelyModule() {
       <Head2Layout text={'Treefeely 서비스들이예요.'} />
       {services().map((s, i) => (
         <AOSHalfLayout key={s.name} type={(i + 1) % 2 === 1 ? 'flip-left' : 'flip-right'}>
-          <a
-            href={s.link}
-            target="_blank"
+          <Linker
+            url={s.link}
+            isBlank={true}
             aria-label={`${s.name} 이동`}
-            rel="noopener noreferrer"
             css={css`
               display: flex;
               flex-direction: column;
@@ -54,7 +54,7 @@ export default function TreefeelyModule() {
               <IconLinkOut size={18} />
             </Text>
             <Text fontSize={fontSizes.small}>{s.date}</Text>
-          </a>
+          </Linker>
         </AOSHalfLayout>
       ))}
     </FlexView>
