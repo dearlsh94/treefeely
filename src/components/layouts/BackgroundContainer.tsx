@@ -16,7 +16,7 @@ export default function BackgroundContainer({ children }: BackgroundContainerPro
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url('/static/images/IMG_5530.jpg');
+    background-image: url('/static/images/bg.webp');
     /* background-image: url('/static/images/tree.jpeg'); */
     background-size: cover;
     background-repeat: no-repeat;
