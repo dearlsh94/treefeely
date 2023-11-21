@@ -4,12 +4,13 @@ import Text from '@/components/common/Text'
 import { css } from '@emotion/react'
 import { fontSizes } from '@/components/common/constants'
 import IconGithub from '@/components/icons/IconGithub'
+import Linker from '@/components/common/Linker'
 
 export default function CallModule() {
   const socials = () => {
     const mailIcon = (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
           <path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
           <path d="m3 7l9 6l9-6" />
         </g>
@@ -86,12 +87,11 @@ export default function CallModule() {
         `}
       >
         {socials().map(s => (
-          <a
-            key={s.name}
-            href={s.link}
-            target="_blank"
+          <Linker
+            key={s.link}
+            url={s.link}
+            isBlank={true}
             aria-label={`${s.name} 이동`}
-            rel="noopener noreferrer"
             css={css`
               display: flex;
               flex-direction: column;
@@ -104,7 +104,7 @@ export default function CallModule() {
             <Text textAlign="center" fontSize={fontSizes.small} color={'#9e9e9e'}>
               {s.name}
             </Text>
-          </a>
+          </Linker>
         ))}
       </div>
     </FlexView>
