@@ -38,6 +38,18 @@ export default function BackgroundContainer({ children }: BackgroundContainerPro
   return (
     <div css={container}>
       <div css={background} />
+      <div
+        className="logo-bg"
+        css={css`
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          background-image: url(/static/images/tree-512x512.png);
+          background-repeat: no-repeat;
+          background-size: 128px 128px;
+          background-position: center;
+        `}
+      />
       <div css={content}>{children}</div>
     </div>
   )
