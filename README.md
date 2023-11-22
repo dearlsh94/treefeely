@@ -1,7 +1,7 @@
 # Treefeely
 
 Welcom toe Root of Treefeely.  
-Treefeely is a professional website that I manage.  
+Treefeely is a personal website that I manage.  
 I utilize this space as a playground, where endless possibilities await.  
 Come here, https://treefeely.com.  
 <br/>
@@ -16,12 +16,9 @@ Come here, https://treefeely.com.
 - Next.js(v12.3.1)
 - Typescript
 - SCSS
+- emotion
 - Google Analytics
 - Naver SearchAdviser <br/>
-
-## Set .env
-
-Add `.env.production`, `.env.local` files in root directory And fill variables
 
 ```
 ENV = production
