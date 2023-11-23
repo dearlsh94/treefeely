@@ -17,7 +17,7 @@ export type TextProps = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<H
 }
 
 export default function Text({
-  color = 'black',
+  color,
   lineHeight = 1.2,
   spacing = 1,
   fontSize = fontSizes.normal,
@@ -31,7 +31,7 @@ export default function Text({
 }: TextProps) {
   const css: CSSObject = {
     backgroundColor: `unset`,
-    color: color,
+    // color: color,
     lineHeight: lineHeight,
     letterSpacing: `${spacing}px`,
     fontSize: fontSize,

@@ -4,6 +4,7 @@ interface AOSFullCardLayoutProps {
   type?: 'fade-down' | 'fade-right' | 'flip-up'
   align?: 'flex-start' | 'center' | 'flex-end'
   mt?: number
+  isGlassMorphism?: boolean
   children: React.ReactNode
 }
 
@@ -11,6 +12,7 @@ export default function AOSFullCardLayout({
   type = 'fade-down',
   align = 'center',
   mt = 6,
+  isGlassMorphism = false,
   children,
 }: AOSFullCardLayoutProps) {
   return (
@@ -21,7 +23,10 @@ export default function AOSFullCardLayout({
         max-width: 1024px;
         clear: both;
         min-height: 120px;
-        background: #fff;
+        ${isGlassMorphism
+          ? `backdrop-filter: blur(16px) saturate(180%);
+          -webkit-backdrop-filter: blur(16px) saturate(180%);`
+          : `background: #fff;`}
         border-radius: 8px;
         margin: ${`${mt}vh 0`};
         padding: 16px 12px;
