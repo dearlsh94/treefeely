@@ -8,11 +8,7 @@ export default function DoingModule() {
     <FlexView direction="column">
       <Head2Layout text={'이런 활동들을 하고 있어요.'} />
       <AOSHalfLayout type="flip-left">
-        <Text textAlign="center">
-          글쓰는 개발자 모임
-          <br />
-          글또 9기
-        </Text>
+        <Text textAlign="center">글또 9기</Text>
         2023.11 ~
       </AOSHalfLayout>
       <AOSHalfLayout type="flip-right">
