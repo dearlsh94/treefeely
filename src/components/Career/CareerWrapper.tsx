@@ -12,7 +12,7 @@ interface CareerWrapperProps {
 }
 export default function CareerWrapper({ name, role, from, to, languages, sentences }: CareerWrapperProps) {
   return (
-    <FlexView direction="column" rowGap={1}>
+    <FlexView direction="column" rowGap={1} width={'fill'}>
       <FlexView direction="column" rowGap={0.25}>
         <Text fontSize={fontSizes.large} fontWeight={fontWeights.w700}>
           {name}
@@ -48,6 +48,7 @@ export default function CareerWrapper({ name, role, from, to, languages, sentenc
       </FlexView>
       <ul
         css={css`
+          width: 80%;
           list-style: none;
           padding: 0;
           display: flex;
