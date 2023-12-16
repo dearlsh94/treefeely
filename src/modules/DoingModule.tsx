@@ -21,24 +21,24 @@ export default function DoingModule() {
       </AOSHalfLayout>
       <AOSHalfLayout type="flip-left">
         <Text textAlign="center">
-          재고 관리 서비스
-          <br /> 안녕재고
-        </Text>
-        2023.10 ~
-      </AOSHalfLayout>
-      <AOSHalfLayout type="flip-right">
-        <Text textAlign="center">
           개인 블로그
           <br /> Weezip
         </Text>
         2023.04 ~
       </AOSHalfLayout>
-      <AOSHalfLayout type="flip-left">
+      <AOSHalfLayout type="flip-right">
         <Text textAlign="center">
           영화 및 독서모임
           <br /> 북이영화
         </Text>
         2021.06 ~
+      </AOSHalfLayout>
+      <AOSHalfLayout type="flip-left">
+        <Text textAlign="center">
+          자기계발 모임
+          <br /> 미라클버즈
+        </Text>
+        2021.03 ~
       </AOSHalfLayout>
       <AOSHalfLayout type="flip-right">
         <Text textAlign="center">
