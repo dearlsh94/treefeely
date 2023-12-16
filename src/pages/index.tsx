@@ -24,9 +24,9 @@ export default function IndexPage() {
         <FlexView direction="column" rowGap={10}>
           <IntroduceModule />
           <TreefeelyModule />
-          <CareerModule />
+          {/* <CareerModule /> */}
           <DoingModule />
-          <DoneModule />
+          {/* <DoneModule /> */}
         </FlexView>
         <FullLayout>
           <CallModule />
