@@ -1,13 +1,13 @@
 import { HTMLAttributes } from 'react'
 import { css } from '@emotion/react'
 
-interface LinkerProps extends HTMLAttributes<HTMLAnchorElement> {
+interface LinkerProps extends HTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
   url: string
   isBlank?: boolean
   children: React.ReactNode
 }
 export default function Linker({ url, isBlank, children, ...rest }: LinkerProps) {
-  return (
+  return url ? (
     <a
       href={url}
       {...rest}
@@ -25,5 +25,7 @@ export default function Linker({ url, isBlank, children, ...rest }: LinkerProps)
     >
       {children}
     </a>
+  ) : (
+    <div {...rest}>{children}</div>
   )
 }
