@@ -66,6 +66,7 @@ export default function DoingModule() {
               css={css`
                 display: flex;
                 align-items: center;
+                text-align: center;
                 column-gap: 8px;
               `}
             >
