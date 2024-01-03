@@ -15,7 +15,7 @@ export default function IntroduceModule() {
     >
       <Head2Layout text={'안녕하세요.'} />
       <AOSFullGlassCardLayout type="fade-down">
-        <Text>더 편리하고 즐거운 세상이 되기를 소망하는</Text>
+        <Text>더 따뜻하고 편리한 세상이 되기를 소망하는</Text>
         <Text fontSize={fontSizes.small}>프론트엔드 개발자</Text>
         <Text fontSize={fontSizes.normal}>
           <strong
