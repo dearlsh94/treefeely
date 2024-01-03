@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class TreefeelyDocument extends Document {
   render() {
-    const desc = '더 편리하고 즐거운 세상이 되기를 소망하는 프론트엔드 개발자 이승환입니다.'
+    const desc = '더 따뜻하고 편리한 세상이 되기를 소망하는 프런트엔드 개발자 이승환입니다.'
 
     return (
       <Html lang="ko">
