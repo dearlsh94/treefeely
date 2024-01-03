@@ -14,6 +14,11 @@ const services = [
     date: '2023.03',
   },
   {
+    name: 'gatsby-source-notion-feely',
+    link: 'https://www.npmjs.com/package/gatsby-source-notion-feely',
+    date: '2023.10',
+  },
+  {
     name: 'Letter Me',
     link: 'https://letter-me.treefeely.com',
     date: '2023.09',
@@ -45,6 +50,8 @@ export default function TreefeelyModule() {
               css={css`
                 display: flex;
                 align-items: center;
+                text-align: center;
+                text-wrap: balance;
                 column-gap: 8px;
               `}
             >
