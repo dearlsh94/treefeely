@@ -3,7 +3,6 @@ import { CSSObject, jsx } from '@emotion/react'
 import { fontSizes, FontSizesValue, fontWeights, FontWeightValue, clamps, ClampsValue } from './constants'
 
 export type Head2Props = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<HTMLLabelElement>) & {
-  color?: string
   lineHeight?: number
   spacing?: number
   fontSize?: FontSizesValue
@@ -16,10 +15,9 @@ export type Head2Props = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<
 }
 
 export default function Head2({
-  color = 'black',
   lineHeight = 1.3,
   spacing = 1,
-  fontSize = fontSizes.xxLarge,
+  fontSize = fontSizes.h2,
   fontWeight = fontWeights.w700,
   textAlign = 'center',
   fill,
@@ -30,7 +28,7 @@ export default function Head2({
 }: Head2Props) {
   const css: CSSObject = {
     backgroundColor: `unset`,
-    color: color,
+    color: `var(--color-font)`,
     lineHeight: lineHeight,
     letterSpacing: `${spacing}px`,
     fontSize: fontSize,

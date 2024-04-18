@@ -1,14 +1,14 @@
 import { css } from '@emotion/react'
 
 interface AOSFullGlassCardLayoutProps {
-  type?: 'fade-down' | 'flip-up'
+  type?: 'fade-down' | 'fade-up' | 'flip-up'
   align?: 'flex-start' | 'center' | 'flex-end'
   mt?: number
   children: React.ReactNode
 }
 
 export default function AOSFullGlassCardLayout({
-  type = 'fade-down',
+  type = 'fade-up',
   align = 'center',
   mt = 6,
   children,

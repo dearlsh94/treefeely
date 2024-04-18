@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import FlexView from '@/components/common/FlexView'
 
 interface FullLayoutProps {
   children: React.ReactNode
@@ -6,16 +7,27 @@ interface FullLayoutProps {
 
 export default function FullLayout({ children }: FullLayoutProps) {
   return (
-    <div
+    <FlexView
+      direction="column"
+      align="start-center"
+      width="fill"
       css={css`
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem 1.25rem;
+        background-color: var(--color-background);
       `}
     >
-      {children}
-    </div>
+      <FlexView
+        direction="column"
+        align="start-center"
+        width="fill"
+        rowGap={24}
+        css={css`
+          max-width: 1280px;
+        `}
+      >
+        {children}
+      </FlexView>
+    </FlexView>
   )
 }

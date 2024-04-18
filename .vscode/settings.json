@@ -6,5 +6,6 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": ["treefeely", "weezip", "feely", "gatsby", "nextjs", "kakao"]
 }

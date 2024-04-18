@@ -3,7 +3,19 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class TreefeelyDocument extends Document {
   render() {
-    const desc = '더 따뜻하고 편리한 세상이 되기를 소망하는 프런트엔드 개발자 이승환입니다.'
+    const desc = 'Root of Treefeely, Treefeely의 모든 서비스.'
+    const ogImage = '/static/images/og_image_treefeely.png'
+
+    const scriptTheme = `
+      const configKey = 'TREEFEELY_CONFIG';
+      const themeKey = 'treefeely-theme';
+      const storage = localStorage.getItem(configKey);
+      const theme = storage ? JSON.parse(storage)[themeKey] : null;
+      const preferDarkQuery = '(prefers-color-scheme: dark)';
+      const preferDark = window.matchMedia(preferDarkQuery).matches;
+      const finalTheme = theme || (preferDark ? 'dark' : 'light');
+      document.documentElement.setAttribute(themeKey, finalTheme);
+    `
 
     return (
       <Html lang="ko">
@@ -16,28 +28,25 @@ export default class TreefeelyDocument extends Document {
           <meta name="robots" content="index,follow" />
           <meta name="author" content="Ethan.Lee" />
           <meta name="writer" content="Ethan.Lee" />
-          <meta name="keyword" content="Treefeely, Ethan, dearlsh94" />
+          <meta name="keyword" content="Treefeely, Weezip, gatsby-source-notion-feely" />
           <meta name="description" content={desc} />
 
           <link rel="icon" href="/static/favicon.png" />
 
+          <meta name="image" content={ogImage} />
           <meta property="og:type" content={'website'} />
           <meta property="og:title" content={'Treefeely'} />
           <meta property="og:description" content={desc} />
           <meta property="og:url" content={'https://treefeely.com'} />
           <meta property="og:site_name" content={'Treefeely'} />
           <meta property="og:locale" content={'ko_KR'} />
-          {/* <meta property="og:image" content={''} /> */}
-          {/* <meta property="og:image:width" content={''} /> */}
-          {/* <meta property="og:image:height" content={''} /> */}
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:image:width" content={'1200'} />
+          <meta property="og:image:height" content={'630'} />
           <meta property="twitter:title" content={'Treefeely'} />
           <meta property="twitter:description" content={desc} />
           <meta property="twitter:url" content={'https://treefeely.com'} />
-
-          {/* <meta name="image" content={seo.image} /> */}
-          {/* <meta name="twitter:card" content="summary_large_image" /> */}
-          {/* <meta name="twitter:image" content={seo.image} /> */}
-          {/* <meta name="twitter:creator" content={seo.twitterUsername} /> */}
+          <meta name="twitter:image" content={ogImage} />
 
           <meta name="naver-site-verification" content="7eb2269b8e8e2da390026b7a185890cb98124e98" />
           {process.env.NODE_ENV !== 'development' && (
@@ -51,6 +60,8 @@ export default class TreefeelyDocument extends Document {
               }}
             />
           )}
+
+          <script dangerouslySetInnerHTML={{ __html: scriptTheme }} />
         </Head>
         <body>
           <Main />
