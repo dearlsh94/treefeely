@@ -3,8 +3,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 export default class TreefeelyDocument extends Document {
   render() {
-    const desc = 'Root of Treefeely, Treefeely의 모든 서비스.'
-    const ogImage = '/static/images/og_image_treefeely.png'
+    const desc = 'Root of Treefeely - Treefeely의 모든 서비스.'
+    const ogImage = 'https://treefeely.com/static/images/og_image_treefeely.png'
 
     const scriptTheme = `
       const configKey = 'TREEFEELY_CONFIG';
