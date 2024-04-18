@@ -1,49 +1,56 @@
 import { forwardRef, HTMLAttributes } from 'react'
 import { CSSObject, jsx, SerializedStyles } from '@emotion/react'
-import { justifyContents, JustifyContentsValue, alignItems, AlignItemsValue } from './constants'
+import { FlexAlign } from './constants'
 
 export type FlexViewProps = HTMLAttributes<HTMLDivElement> & {
-  center?: boolean
   direction?: 'row' | 'column'
-  justifyContent?: JustifyContentsValue
-  alignItem?: AlignItemsValue
+  align?: FlexAlign
   width?: number | 'fit' | 'fill'
   flex?: number
-  nowrap?: boolean
   colGap?: number
   rowGap?: number
-  bgColor?: string
   css?: SerializedStyles
+  wrap?: boolean
 }
 
 export default forwardRef<HTMLDivElement, FlexViewProps>(
   (
     {
-      center,
       direction = 'row',
-      justifyContent = justifyContents.center,
-      alignItem = alignItems.center,
+      align = 'center-center',
       width = 'fit',
-      flex = 1,
-      nowrap,
+      flex = 0,
       colGap = 0,
       rowGap = 0,
-      bgColor = 'initial',
+      wrap = false,
       ...props
     }: FlexViewProps,
     ref
   ) => {
+    const [justify, items] = align.split('-')
+    const justifyContent =
+      justify === 'between'
+        ? 'space-between'
+        : justify === 'around'
+        ? 'space-around'
+        : justify === 'start'
+        ? 'flex-start'
+        : justify === 'end'
+        ? 'flex-end'
+        : 'center'
+    const alignItem =
+      items === 'start' ? 'flex-start' : items === 'end' ? 'flex-end' : items === 'center' ? 'center' : 'stretch'
+
     const css: CSSObject = {
       display: `flex`,
       flexDirection: direction === 'row' ? 'row' : 'column',
-      justifyContent: center ? 'center' : justifyContent,
-      alignItems: center ? 'center' : alignItem,
-      width: width === 'fit' ? 'fit-content' : width === 'fill' ? '100%' : `${width}px`,
+      justifyContent: justifyContent,
+      alignItems: alignItem,
+      width: width === 'fit' ? 'fit-content' : width === 'fill' ? '100%' : `${width}`,
       flex: flex,
-      ...(nowrap && { flexWrap: `nowrap` }),
-      columnGap: `${colGap}rem`,
-      rowGap: `${rowGap}rem`,
-      backgroundColor: bgColor,
+      columnGap: `${colGap}px`,
+      rowGap: `${rowGap}px`,
+      flexWrap: wrap ? 'wrap' : 'nowrap',
     }
 
     return jsx(`div`, { css, ref, ...props })

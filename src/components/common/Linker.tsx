@@ -16,11 +16,6 @@ export default function Linker({ url, isBlank, children, ...rest }: LinkerProps)
       css={css`
         text-decoration: none;
         transition: all 0.3s;
-        @media (hover: hover) {
-          &:hover {
-            transform: translateY(-5px);
-          }
-        }
       `}
     >
       {children}

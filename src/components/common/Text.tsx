@@ -11,6 +11,7 @@ export type TextProps = (HTMLAttributes<HTMLSpanElement> | LabelHTMLAttributes<H
   textAlign?: 'left' | 'center' | 'right'
   fill?: boolean
   noDrag?: boolean
+  noWrap?: boolean
   underline?: boolean
   clamp?: ClampsValue
   css?: SerializedStyles
@@ -25,13 +26,14 @@ export default function Text({
   textAlign = 'left',
   fill,
   noDrag,
+  noWrap,
   underline = false,
   clamp = clamps.none,
   ...props
 }: TextProps) {
   const css: CSSObject = {
     backgroundColor: `unset`,
-    // color: color,
+    color: color || `var(--color-font)`,
     lineHeight: lineHeight,
     letterSpacing: `${spacing}px`,
     fontSize: fontSize,
@@ -39,6 +41,7 @@ export default function Text({
     textAlign: textAlign,
     ...(fill && { flex: 1 }),
     ...(noDrag && { userSelect: `none` }),
+    ...(noWrap && { textWrap: 'nowrap' }),
     ...(underline && {
       textDecoration: `underline`,
       textUnderlinePosition: `under`,

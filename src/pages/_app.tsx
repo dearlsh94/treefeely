@@ -1,18 +1,18 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import '@/styles/index.scss'
-import { GA_TRACKING_ID } from '../lib/gtag'
 import Script from 'next/script'
 import AOS from 'aos'
+import '@/styles/index.scss'
+import { GA_TRACKING_ID } from '../lib/gtag'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
-const App = ({ Component, pageProps }: AppProps) => {
+export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
       easing: 'ease-out',
-      offset: 60,
-      mirror: true,
+      offset: 15,
+      once: false,
     })
   }, [])
 
@@ -44,5 +44,3 @@ const App = ({ Component, pageProps }: AppProps) => {
     </>
   )
 }
-
-export default App
