@@ -19,19 +19,19 @@ export default function IndexPage() {
         <Head1Divider title="TREEFEELY" />
         <ServiceIntro
           title="WeeZip"
-          description="노션을 CMS로 사용하고 있는 개인 블로그예요. 기술, 회고, 리뷰 등 다양한 글을 작성하고 있어요."
+          description="Treefeely 메인테이너인 이썬의 블로그예요. 노션을 CMS로 사용해서 기술, 회고, 리뷰 등 다양한 글을 작성하고 있어요."
           badges={['React']}
           link="https://weezip.treefeely.com"
         />
         <ServiceIntro
           title="gatsby-source-notion-feely"
-          description="Gatsby에서 노션 데이터베이스의 데이터를 불러올 수 있는 플러그인이에요."
+          description="Gatsby에서 노션 데이터베이스의 데이터를 불러올 수 있는 플러그인이에요. 다중 데이터베이스 연결 및 필터링 기능 등을 제공하고 있어요."
           badges={['Gatsby']}
           link="https://github.com/dearlsh94/gatsby-source-notion-feely"
         />
         <ServiceIntro
           title="Letter-Me"
-          description="편지함 주소만 알면 누구나 편지를 보낼 수 있어요. 편지함을 만들고 주소를 공유하세요. "
+          description="편지함 주소만 알면 누구나 편지를 보낼 수 있어요. 편지함을 만들고 주소를 공유해보세요."
           badges={['Svelte']}
           link="https://letter-me.treefeely.com"
         />
