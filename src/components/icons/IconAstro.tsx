@@ -14,8 +14,8 @@ export default function IconAstro({ size = 24 }: IconAstroProps) {
           gradientTransform="scale(.1)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#000014" />
-          <stop offset="1" stop-color="#150426" />
+          <stop offset="0" stopColor="#000014" />
+          <stop offset="1" stopColor="#150426" />
         </linearGradient>
         <linearGradient
           id="b"
@@ -26,8 +26,8 @@ export default function IconAstro({ size = 24 }: IconAstroProps) {
           gradientTransform="scale(.1)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#ff1639" />
-          <stop offset="1" stop-color="#ff1639" stop-opacity="0" />
+          <stop offset="0" stopColor="#ff1639" />
+          <stop offset="1" stopColor="#ff1639" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path
