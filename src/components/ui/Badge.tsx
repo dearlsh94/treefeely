@@ -4,8 +4,9 @@ import IconReact from '../icons/IconReact'
 import IconSvelte from '../icons/IconSvelte'
 import IconGatsby from '../icons/IconGatsby'
 import IconNextjs from '../icons/IconNextjs'
+import IconAstro from '../icons/IconAstro'
 
-export type BadgeType = 'React' | 'Svelte' | 'Nextjs' | 'Gatsby'
+export type BadgeType = 'React' | 'Svelte' | 'Nextjs' | 'Gatsby' | 'Astro'
 
 interface BadgeProps {
   type: BadgeType
@@ -21,6 +22,8 @@ export default function Badge({ type }: BadgeProps) {
       ? '#64328B'
       : type === 'Nextjs'
       ? '#000'
+      : type === 'Astro'
+      ? '#fe5c01'
       : 'var(--color-mono)'
   return (
     <FlexView
@@ -36,6 +39,7 @@ export default function Badge({ type }: BadgeProps) {
       {type === 'Svelte' && <IconSvelte size={'1.25rem'} />}
       {type === 'Gatsby' && <IconGatsby size={'1.25rem'} />}
       {type === 'Nextjs' && <IconNextjs size={'1.25rem'} />}
+      {type === 'Astro' && <IconAstro size={'1.25rem'} />}
       <Text noDrag>{type}</Text>
     </FlexView>
   )
