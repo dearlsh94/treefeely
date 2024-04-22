@@ -49,18 +49,6 @@ export default class TreefeelyDocument extends Document {
           <meta name="twitter:image" content={ogImage} />
 
           <meta name="naver-site-verification" content="7eb2269b8e8e2da390026b7a185890cb98124e98" />
-          {process.env.NODE_ENV !== 'development' && (
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-              `,
-              }}
-            />
-          )}
-
           <script dangerouslySetInnerHTML={{ __html: scriptTheme }} />
         </Head>
         <body>
