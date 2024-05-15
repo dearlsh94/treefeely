@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Script from 'next/script'
 import AOS from 'aos'
 import '@/styles/index.scss'
-import { GA_TRACKING_ID } from '../lib/gtag'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import { GA_TRACKING_ID } from '@/constants'
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
