@@ -30,7 +30,7 @@ export default function Header() {
           height: 48px;
         `}
       >
-        {theme === Themes.LIGHT ? <IconDark /> : <IconLight />}
+        {theme === Themes.LIGHT ? <IconLight /> : <IconDark />}
       </button>
     </FlexView>
   )
