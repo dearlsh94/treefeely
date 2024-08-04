@@ -18,6 +18,12 @@ export default function IndexPage() {
       <FullLayout>
         <Head1Divider title="TREEFEELY" />
         <ServiceIntro
+          title="Slosla"
+          description="AI를 활용하여 저속노화에 대한 정보와 팁을 제공하고, 사용자들이 서로 경험을 공유할 수 있는 플랫폼입니다."
+          badges={['React']}
+          link="https://slosla.treefeely.com"
+        />
+        <ServiceIntro
           title="WeeZip"
           description="Treefeely 메인테이너인 이썬의 블로그예요. 노션을 CMS로 사용해서 기술, 회고, 리뷰 등 다양한 글을 작성하고 있어요."
           badges={['React']}
