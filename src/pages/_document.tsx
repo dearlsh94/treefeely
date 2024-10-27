@@ -49,6 +49,13 @@ export default class TreefeelyDocument extends Document {
           <meta name="twitter:image" content={ogImage} />
 
           <meta name="naver-site-verification" content="7eb2269b8e8e2da390026b7a185890cb98124e98" />
+
+          <script
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1622942491482378"
+            crossOrigin="anonymous"
+            async
+          />
+
           <script dangerouslySetInnerHTML={{ __html: scriptTheme }} />
         </Head>
         <body>
